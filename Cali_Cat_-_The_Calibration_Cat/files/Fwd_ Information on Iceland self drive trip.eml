@@ -1,0 +1,1344 @@
+Received: from mr28p00im-smtpin016.me.com ([17.110.71.15])
+ by ms71082.mac.com (Oracle Communications Messaging Server 8.0.2.3.20180628
+ 64bit (built Jun 28 2018)) with ESMTP id <0PW700E779JCII30@ms71082.mac.com>
+ for reilly_bernie@mac.com; Wed, 14 Aug 2019 00:04:24 +0000 (GMT)
+Original-recipient: rfc822;reilly_bernie@mac.com
+Return-path: <jennlj79@gmail.com>
+Received: from mail-ot1-f54.google.com
+ (mail-ot1-f54.google.com [209.85.210.54])	by mr28p00im-smtpin016.me.com
+ (Postfix) with ESMTPS id B108A440186	for <reilly_bernie@mac.com>; Wed,
+ 14 Aug 2019 00:04:23 +0000 (UTC)
+Authentication-results: magent1281.usspk05.pie.apple.com; dmarc=pass
+ header.from=gmail.com
+x-dmarc-info: pass=pass; dmarc-policy=none; s=r1; d=r1
+x-dmarc-policy: v=DMARC1; p=none; sp=quarantine;
+ rua=mailto:mailauth-reports@google.com
+Authentication-results: magent1816.usspk05.pie.apple.com;	dkim=pass (2048-bit
+ key) header.d=gmail.com header.i=@gmail.com header.b=GphPpAWP
+Authentication-results: magent0634.usspk05.pie.apple.com; spf=pass
+ (magent0634.usspk05.pie.apple.com: domain of jennlj79@gmail.com designates
+ 209.85.210.54 as permitted sender) smtp.mailfrom=jennlj79@gmail.com
+Received-SPF: pass (magent0634.usspk05.pie.apple.com: domain of
+ jennlj79@gmail.com designates 209.85.210.54 as permitted sender)
+ receiver=magent0634.usspk05.pie.apple.com; client-ip=209.85.210.54;
+ helo=mail-ot1-f54.google.com; envelope-from=jennlj79@gmail.com
+Received: by mail-ot1-f54.google.com with SMTP id k18so46162007otr.3 for
+ <reilly_bernie@mac.com>; Tue, 13 Aug 2019 17:04:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com;
+ s=20161025;
+ h=from:content-transfer-encoding:mime-version:date:subject:message-id
+ :references:to;        bh=Maa3e+kyadH5gkGOmq0nCtjpcTAY/xTLT4JOR3JKMR4=;
+ b=GphPpAWPl7fsqJHEDM2y0xqFsH2GjydaSqchuO90WANrbdHm4AlOqSR768pIi0YdHB
+ PX35ZfYcFGUWpdiu9DGUkfnXv4nvddlT1dhSiSN7m4s54VSKiBT5ywpFmA/DrjYpfFed
+ zSXVDZtFlaIbfx58rnhj6/1lyjfThi/kRUg19EawBAcjhVKc61ciFKcOFmGHAeG7r4XJ
+ mVsJtjljpetuI8cK6FI338gqvHC0FOrs9M8lMNWd2N5Ad0LsrXBamABOVaLs6EnEVD52
+ yKDsigBYvV8K+pdT5K554JNHAQYg21OEJGlHh8GQFdWPsyGMVz3YCPCSOe42OoUQowG3
+ t4EA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:content-transfer-encoding:mime-version:date
+ :subject:message-id:references:to;
+ bh=Maa3e+kyadH5gkGOmq0nCtjpcTAY/xTLT4JOR3JKMR4=;
+ b=eP2RuGcPQDcQJo53Zu9DQOuPUDv5QVQD94aTxL1mM6qCTJDuGMT0noBLhgtNof0qnj
+ 17bxnu5xXkdDub0Z53XSbiNXQH7QHoqkVBSp3pgb36LF5BSjm/VQ7akXL3gXDKh711YX
+ 6Ie5Rvy6IToWOYek4U3aTS1slE379Di5LPuKCyVPyrN4kXzzAGMcN5yksHBi/+Jpl8rI
+ ZZzKBCoIGyioI59+lSyr3qQ3mB/wqZ46EOi0VtGzlzuUmQMdsGtoT+xwm408kkERlXdZ
+ MhVY44SOytxQ1Ld2UDu05+eaNDxOxqJBY8H4ElovK++OMK1q0XSv3uIXyTRbl52Dyg8Q
+ 1Y+Q==
+X-Gm-Message-State: APjAAAVbwjGucP04iBDUhJqD/bXUR5peaRRFOa3vKA3PzcKlE0+XsfSH
+	OAaKIR7G56VPHeGnBK5jSEzUriyP
+X-Google-Smtp-Source:
+ APXvYqz4k7LRxNh/P4R2/yLO0NItBnrNC9/kQcnaQYjHTIwYJYC9kT0gKmrjwBcEEYF5VJqp+gRMBw==
+X-Received: by 2002:a6b:8e47:: with SMTP id q68mr37259463iod.88.1565741062925;
+ Tue, 13 Aug 2019 17:04:22 -0700 (PDT)
+Received: from [192.168.7.94] ([75.135.101.173]) by smtp.gmail.com with ESMTPSA
+ id c17sm83175985ioo.82.2019.08.13.17.04.21 for <reilly_bernie@mac.com>
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128); Tue,
+ 13 Aug 2019 17:04:21 -0700 (PDT)
+From: Jenn Reilly <jennlj79@gmail.com>
+Content-type: multipart/alternative;
+ boundary=Apple-Mail-423CA0EA-7209-49E6-B879-0853F8737DE7
+Content-transfer-encoding: 7bit
+MIME-version: 1.0 (1.0)
+Date: Tue, 13 Aug 2019 20:04:20 -0400
+Subject: Fwd: Information on Iceland self drive trip
+Message-id: <4C90B9D5-1FE7-4CD4-B4DE-7899E87C8B12@gmail.com>
+References: <079401d5522d$1acf5920$506e0b60$@cruiseplanners.com>
+To: Bernie Reilly <reilly_bernie@mac.com>
+X-Mailer: iPhone Mail (16F203)
+X-MANTSH: 1TEIXR1gYEloaGkNHB0tNT0ReQ0QZHxodEQpMQxcbHQQbGxsEGx0ZBBkYEBseGh8
+ aEQpMWRcbGhofEQpZRBdnf3tOSGlbAWxwUhEKWU0Xbk9GQ1xPWBEKX1kXGBkSEQpfTRdkRURPE
+ QpZSRcacRoQGncGGBsScRgTExAadwYYGgYaEQpZXhdsbHkRCkNOF0MaGUNAXUBrb2MTT2MYbUJ
+ EGkEYUF9oQE5bE2RJHG5ZEQpYXBcZBBoEHhkHHRwSSx0fH0kFGx0EGxsaBB0aBBsZGRAbHhofG
+ hEKXlkXf0N6eUARCk1cFxMYEQpMWhdoaWtNaxEKTEYXb2trEQpDWhcYGhMEEh8EGBsaBB8eEQp
+ CXhcbEQpCXBcbEQpeThcbEQpCSxdjU2NrexNYfhpfXhEKQkkXY1Nja3sTWH4aX14RCkJFF3pdX
+ kJrEm1bEkN7EQpCThdjU2NrexNYfhpfXhEKQkwXY21bZVpfelgFRH4RCkJsF2lfchgTXkhzSW5
+ MEQpCQBdpaRpJUEYZQ2ZgZhEKQlgXY2FeGUtPb3kSUGsRCkJ4F3p4UnpNAV5fel9iEQpwZxdkA
+ RhoSHprWUcBTRAaEQpwaBdsfHtiXVwSBRgFRxAaEQpwaBdhYkIdQB16QUJOcxAaEQpwaBdrTkt
+ jXXhuSEloRBAaEQpwaBdnEhpgSUJZQVpmchAaEQpwaBdhS19iSGd9WkZeXRAfGxEKcH0XYlJoZ
+ 1pjHmZnU18QGhEKcGcXY2hiTxsBYkV4f0kQGRoRCnBnF29ZRhwbZBhccB5rEBoRCnB9F2QSYkB
+ eTRpvT1NrEBoRCnB9F2RPXhxYXm5/XV9cEBoRCnB9F2RsExJ8WGN4YwV+EBoRCnBnF2BaZFgYe
+ FpNQWxAEBkaEQpwfRdhYhhNAVsfTmRaWRAaEQpwfxdnSE54En9CSxhQZhAcGBEKcF8XZHNfeht
+ DcH9bU0wQHhoRCnB/F2Rrch1YfUBjbGJIEBoRCnBfF2Vsck1jZgFsSBlzEBoRCnB/F2YZaUVEf
+ Rt/GUBlEAcbExIRCnBfF2dMTX1ZZ3NZRF1SEBoRCnB/F2FcGXNCeW95QkBeEAcbHRwRCnBfF25
+ 8H0RPZm4aaEFIEBoRCnBsF2l4XkttBUEZZl9PEBoRCnBMF2hgGm1CeBkdbURvEBoRCnBDF2EbR
+ kIaXmlAXQFMEBoRCm1+FxoRClhNF0sR
+X-CLX-Shades: Deliver
+X-CLX-UShades: None
+X-CLX-Score: 1005
+X-CLX-UnSpecialScore: 238
+X-CLX-Spam: false
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:,,
+ definitions=2019-08-13_07:,, signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ clxscore=1005 suspectscore=0 malwarescore=0 phishscore=0 adultscore=0
+ bulkscore=0 classifier=clx:Deliver adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1812120000 definitions=main-1908130229
+
+
+--Apple-Mail-423CA0EA-7209-49E6-B879-0853F8737DE7
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Sent from my iPhone
+
+Begin forwarded message:
+
+> From: "Lorraine Whittemore" <lwhittemore@cruiseplanners.com>
+> Date: August 13, 2019 at 7:16:14 PM EDT
+> To: "'Jennifer Reilly'" <jennlj79@gmail.com>
+> Subject: RE: Information on Iceland self drive trip
+>=20
+> Hello Jennifer,
+> =20
+> I took a look at availability and some of my favorites are sold out. I wro=
+te to the Minna Mosfell Guesthouse since they require an email to check for a=
+vailability. I hope to hear from them tomorrow. Here is an itinerary I was t=
+hinking might work to give you a few days in different areas to explore with=
+out too much driving per day.
+> =20
+> Depending on availability at Minna Mosfell, either start or end in Reykjav=
+ik. I would spend at least 1.5 to 2 days downtown Reykjavik. You can head to=
+ward Thingvellir National Park when you stay at Minna Mosfell. You can then v=
+isit Gulfoss and the Geysir area. I would head toward Vik and stay there 2 n=
+ights which allows you to explore Sljalandsfoss, Skogafoss, the DC Plane and=
+ ride horses in the lava fields. Head up to Hofn where you can do the glacie=
+r activites and Jokulsarlon and Skaftafell. If you center yourself in these p=
+laces, most things can be done in day trips.
+> =20
+> I want to be upfront about AirBNB. These aren=E2=80=99t commissionable to m=
+e, which is how I get paid for planning. I also have no way of verifying the=
+ir reviews, etc. which is uncomfortable as I don=E2=80=99t want my clients t=
+o have a bad experience. I can find guesthouses and many of the hotels in th=
+ese areas are more like guesthouses, very small and rustic or are really wel=
+l located with amazing views.
+> =20
+> I did check on a car rental and an SUV like a Suzuki Vitara is about $632 b=
+efore insurance. I don=E2=80=99t think you need a 4x4 unless you plan to go o=
+ff road. All of the things you want to see are on paved roads. The hardest t=
+hing to deal with in Iceland is the wind. It can be dangerously windy on the=
+ roads. You may get a little snow this time of year but it shouldn=E2=80=99t=
+ be anything to impact your driving. I had clients who traveled the same tim=
+e last year and they even saw a bit of Northern Lights.
+> =20
+> I am sure we can make this work in terms of planning. See what you think.
+> =20
+> Lorraine
+> =20
+> Lorraine Whittemore
+>=20
+> (860)-779-6531 (office)
+> (860)-230-1506 (mobile)
+> =20
+> www.planurescape.net Follow us for newsletter and tour updates
+> =20
+> Booked a trip and looking for fun excursions and activites, click here and=
+ explore!
+> https://www.viator.com/?accountid=3DTRE3Q0W&mcid=3D58086
+> =20
+> =20
+> =20
+> =20
+> From: Jennifer Reilly <jennlj79@gmail.com>=20
+> Sent: Monday, August 12, 2019 10:21 PM
+> To: Lorraine Whittemore <lwhittemore@cruiseplanners.com>
+> Subject: Re: Information on Iceland self drive trip
+> =20
+> Hi Lorraine-
+> So we are finally planning our trip to Iceland....2 years after you sent u=
+s a mock itinerary :). Are you still available to help us figure out a trip?=
+  If so, we now have a better idea of what we are looking for after talking t=
+o several friends who have already made the trip.
+> =20
+> My husband, Bernie and I were hoping to travel September 23 to October 1st=
+ or 2nd.  We have been watching flights and they seem very reasonable.  We c=
+an leave out of Boston or Bradley....really just depends on how much of a pr=
+ice difference it is.
+> =20
+> We are very interested in doing a self driving tour so we would like to re=
+nt a 4x4 vehicle and we are open to staying in Air BNB=E2=80=99s and guest h=
+ouses and are interested in places that serve breakfast and/or have kitchens=
+.  We were told that in the big city make sure your accommodations include p=
+arking so we wouldn=E2=80=99t have to pay extra for that. =20
+> =20
+> We like your idea of sticking to the Southern coast...
+> =20
+> Some things that we for sure want included in the trip, in no particular o=
+rder:
+> Black sands beach (Reynisfjara in Vick)
+> Checking out the icebergs in Jokulsarlon-boat ride
+> Thingvellir National Park
+> Blue Lagoon
+> Seljalandsfoss waterfall
+> Hiking in glacial ice caves
+> Riding Icelandic horses across lava fields
+> The golden circle
+> Lava fields and seeing lush green places
+> We want to stay at the Minna Mosfell Guesthouse-our friends said it was lo=
+vely!
+> =20
+> We are open to other ideas but we are pretty much overwhelmed with all the=
+ information our friends sent us so are looking for some help.  I know this i=
+s a short time frame to get everything planned so if you aren=E2=80=99t able=
+ to do it let me know ASAP and we totally understand.  We have been talking a=
+bout it for ages and all the stars finally aligned for us to go! =20
+> =20
+> I look forward to hearing from you!
+> Jenn Reilly
+> =20
+> Sent from my iPad
+>=20
+> On Aug 12, 2019, at 9:25 PM, Jennifer Reilly <jennlj79@gmail.com> wrote:
+>=20
+> =20
+>=20
+> Sent from my iPad
+>=20
+> Begin forwarded message:
+>=20
+> From: "Lorraine Whittemore" <lwhittemore@cruiseplanners.com>
+> Date: September 21, 2017 at 6:03:20 PM EDT
+> To: <jennlj79@gmail.com>
+> Subject: Information on Iceland self drive trip
+>=20
+> Hi Jenn,
+> =20
+> It was so nice to meet you at the fair. When we talked you were thinking o=
+f a self drive trip around Iceland for 2018-2019. I thought it may be helpfu=
+l for you to see what a full circumference tour would entail and what the co=
+st may be. Please consider that I had to price with today=E2=80=99s pricing a=
+nd this could change based on when you travel. It should give you an idea of=
+ all the wonderful things you can see and experience in this amazing country=
+. There are also some really fun and adventurous tours that I added with lin=
+ks so you can learn more about them.
+> =20
+> I would love the opportunity to help you plan this trip when you are ready=
+. I will do the leg work to map the trip out, help you decide where to stop a=
+nd where to stay overnight, provide an itinerary like the one attached with c=
+omplete directions and a map of Iceland!
+> =20
+> Look forward to working with you. Please give me a call when you are ready=
+! Let me know if you have questions.
+> =20
+> Lorraine
+> =20
+> Lorraine Whittemore=20
+
+--Apple-Mail-423CA0EA-7209-49E6-B879-0853F8737DE7
+Content-Type: multipart/related;
+	type="text/html";
+	boundary=Apple-Mail-3E87283E-B143-4C3D-BA4F-6394690A6EB4
+Content-Transfer-Encoding: 7bit
+
+
+--Apple-Mail-3E87283E-B143-4C3D-BA4F-6394690A6EB4
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=3D=
+utf-8"></head><body dir=3D"auto"><br><br><div id=3D"AppleMailSignature" dir=3D=
+"ltr">Sent from my iPhone</div><div dir=3D"ltr"><br>Begin forwarded message:=
+<br><br></div><blockquote type=3D"cite"><div dir=3D"ltr"><b>From:</b> "Lorra=
+ine Whittemore" &lt;<a href=3D"mailto:lwhittemore@cruiseplanners.com">lwhitt=
+emore@cruiseplanners.com</a>&gt;<br><b>Date:</b> August 13, 2019 at 7:16:14 P=
+M EDT<br><b>To:</b> "'Jennifer Reilly'" &lt;<a href=3D"mailto:jennlj79@gmail=
+.com">jennlj79@gmail.com</a>&gt;<br><b>Subject:</b> <b>RE: Information on Ic=
+eland self drive trip</b><br><br></div></blockquote><div dir=3D"ltr"><span><=
+/span></div><blockquote type=3D"cite"><div dir=3D"ltr"><meta http-equiv=3D"C=
+ontent-Type" content=3D"text/html; charset=3Dutf-8"><meta name=3D"Generator"=
+ content=3D"Microsoft Word 15 (filtered medium)"><!--[if !mso]><style>v\:* {=
+behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"AvenirNext LT Pro Bold";}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.EmailStyle18
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--><div class=3D"WordSection1"><p class=3D"Ms=
+oNormal">Hello Jennifer,<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o=
+:p></p><p class=3D"MsoNormal">I took a look at availability and some of my f=
+avorites are sold out. I wrote to the Minna Mosfell Guesthouse since they re=
+quire an email to check for availability. I hope to hear from them tomorrow.=
+ Here is an itinerary I was thinking might work to give you a few days in di=
+fferent areas to explore without too much driving per day. <o:p></o:p></p><p=
+ class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">Depending o=
+n availability at Minna Mosfell, either start or end in Reykjavik. I would s=
+pend at least 1.5 to 2 days downtown Reykjavik. You can head toward Thingvel=
+lir National Park when you stay at Minna Mosfell. You can then visit Gulfoss=
+ and the Geysir area. I would head toward Vik and stay there 2 nights which a=
+llows you to explore Sljalandsfoss, Skogafoss, the DC Plane and ride horses i=
+n the lava fields. Head up to Hofn where you can do the glacier activites an=
+d Jokulsarlon and Skaftafell. If you center yourself in these places, most t=
+hings can be done in day trips. <o:p></o:p></p><p class=3D"MsoNormal"><o:p>&=
+nbsp;</o:p></p><p class=3D"MsoNormal">I want to be upfront about AirBNB. The=
+se aren=E2=80=99t commissionable to me, which is how I get paid for planning=
+. I also have no way of verifying their reviews, etc. which is uncomfortable=
+ as I don=E2=80=99t want my clients to have a bad experience. I can find gue=
+sthouses and many of the hotels in these areas are more like guesthouses, ve=
+ry small and rustic or are really well located with amazing views. <o:p></o:=
+p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">I d=
+id check on a car rental and an SUV like a Suzuki Vitara is about $632 befor=
+e insurance. I don=E2=80=99t think you need a 4x4 unless you plan to go off r=
+oad. All of the things you want to see are on paved roads. The hardest thing=
+ to deal with in Iceland is the wind. It can be dangerously windy on the roa=
+ds. You may get a little snow this time of year but it shouldn=E2=80=99t be a=
+nything to impact your driving. I had clients who traveled the same time las=
+t year and they even saw a bit of Northern Lights. <o:p></o:p></p><p class=3D=
+"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">I am sure we can mak=
+e this work in terms of planning. See what you think.<o:p></o:p></p><p class=
+=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal">Lorraine<o:p></o:=
+p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><div><p class=3D"MsoNormal=
+"><i><span style=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,sans-se=
+rif;color:#70AD47"><img width=3D"68" height=3D"82" style=3D"width:.7083in;he=
+ight:.8571in" id=3D"Picture_x0020_1" src=3D"cid:image001.jpg@01D55209.45C4DB=
+10" alt=3D"2019emailsign"></span></i><i><span style=3D"font-size:12.0pt;font=
+-family:&quot;Cambria&quot;,serif;color:#70AD47">Lorraine Whittemore</span><=
+/i><i><span style=3D"font-size:14.0pt;font-family:&quot;Cambria&quot;,serif;=
+color:#70AD47"><o:p></o:p></span></i></p><p class=3D"MsoNormal"><img width=3D=
+"232" height=3D"44" style=3D"width:2.4166in;height:.4583in" id=3D"Picture_x0=
+020_2" src=3D"cid:image002.png@01D55209.45C4DB10" alt=3D"new logo"><span sty=
+le=3D"font-size:12.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#70A=
+D47"><o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size:1=
+0.0pt;font-family:&quot;Arial&quot;,sans-serif">(860)-779-6531 (office)<o:p>=
+</o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font=
+-family:&quot;Arial&quot;,sans-serif">(860)-230-1506 (mobile)<o:p></o:p></sp=
+an></p><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&q=
+uot;Tahoma&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNorm=
+al"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif=
+"><a href=3D"http://www.planurescape.net/"><span style=3D"color:#0563C1">www=
+.planurescape.net</span></a> Follow us for newsletter and tour updates<o:p><=
+/o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-=
+family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p><p class=3D=
+"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sa=
+ns-serif">Booked a trip and looking for fun excursions and activites, click h=
+ere and explore!<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"=
+font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif"><a href=3D"https:=
+//www.viator.com/?accountid=3DTRE3Q0W&amp;mcid=3D58086"><span style=3D"color=
+:#0563C1">https://www.viator.com/?accountid=3DTRE3Q0W&amp;mcid=3D58086</span=
+></a><o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size:1=
+0.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>=
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Tah=
+oma&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><a h=
+ref=3D"http://www.facebook.com/planurescape"><span style=3D"font-size:10.0pt=
+;font-family:&quot;Tahoma&quot;,sans-serif;color:windowtext;text-decoration:=
+none"><img border=3D"0" width=3D"29" height=3D"29" style=3D"width:.3035in;he=
+ight:.3035in" id=3D"Picture_x0020_3" src=3D"cid:image007.png@01D5520B.92B98F9=
+0" alt=3D"FB"></span></a><span style=3D"font-size:10.0pt;font-family:&quot;T=
+ahoma&quot;,sans-serif"> </span><a href=3D"https://www.instagram.com/planure=
+scape_/"><span style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans=
+-serif;color:windowtext;text-decoration:none"><img border=3D"0" width=3D"31"=
+ height=3D"31" style=3D"width:.3214in;height:.3214in" id=3D"Picture_x0020_4"=
+ src=3D"cid:image008.png@01D5520B.92B98F90" alt=3D"Instagram"></span></a><sp=
+an style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><o:p=
+></o:p></span></p></div><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><div><di=
+v style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in 0in 0=
+in"><p class=3D"MsoNormal"><b>From:</b> Jennifer Reilly &lt;<a href=3D"mailt=
+o:jennlj79@gmail.com">jennlj79@gmail.com</a>&gt; <br><b>Sent:</b> Monday, Au=
+gust 12, 2019 10:21 PM<br><b>To:</b> Lorraine Whittemore &lt;<a href=3D"mail=
+to:lwhittemore@cruiseplanners.com">lwhittemore@cruiseplanners.com</a>&gt;<br=
+><b>Subject:</b> Re: Information on Iceland self drive trip<o:p></o:p></p></=
+div></div><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"MsoNormal"=
+>Hi Lorraine-<o:p></o:p></p><div><p class=3D"MsoNormal">So we are finally pl=
+anning our trip to Iceland....2 years after you sent us a mock itinerary :).=
+ Are you still available to help us figure out a trip? &nbsp;If so, we now h=
+ave a better idea of what we are looking for after talking to several friend=
+s who have already made the trip.<o:p></o:p></p></div><div><p class=3D"MsoNo=
+rmal"><o:p>&nbsp;</o:p></p></div><div><p class=3D"MsoNormal">My husband, Ber=
+nie and I were hoping to travel September 23 to October 1st or 2nd. &nbsp;We=
+ have been watching flights and they seem very reasonable. &nbsp;We can leav=
+e out of Boston or Bradley....really just depends on how much of a price dif=
+ference it is.<o:p></o:p></p></div><div><p class=3D"MsoNormal"><o:p>&nbsp;</=
+o:p></p></div><div><p class=3D"MsoNormal">We are very interested in doing a s=
+elf driving tour so we would like to rent a 4x4 vehicle and we are open to s=
+taying in Air BNB=E2=80=99s and guest houses and are interested in places th=
+at serve breakfast and/or have kitchens. &nbsp;We were told that in the big c=
+ity make sure your accommodations include parking so we wouldn=E2=80=99t hav=
+e to pay extra for that. &nbsp;<o:p></o:p></p></div><div><p class=3D"MsoNorm=
+al"><o:p>&nbsp;</o:p></p></div><div><p class=3D"MsoNormal">We like your idea=
+ of sticking to the Southern coast...<o:p></o:p></p></div><div><p class=3D"M=
+soNormal"><o:p>&nbsp;</o:p></p></div><div><p class=3D"MsoNormal">Some things=
+ that we for sure want included in the trip, in no particular order:<o:p></o=
+:p></p></div><div><p class=3D"MsoNormal">Black sands beach (Reynisfjara in V=
+ick)<o:p></o:p></p></div><div><p class=3D"MsoNormal">Checking out the iceber=
+gs in Jokulsarlon-boat ride<o:p></o:p></p></div><div><p class=3D"MsoNormal">=
+Thingvellir National Park<o:p></o:p></p></div><div><p class=3D"MsoNormal">Bl=
+ue Lagoon<o:p></o:p></p></div><div><p class=3D"MsoNormal">Seljalandsfoss wat=
+erfall<o:p></o:p></p></div><div><p class=3D"MsoNormal">Hiking in glacial ice=
+ caves<o:p></o:p></p></div><div><p class=3D"MsoNormal">Riding Icelandic hors=
+es across lava fields<o:p></o:p></p></div><div><p class=3D"MsoNormal">The go=
+lden circle<o:p></o:p></p></div><div><p class=3D"MsoNormal">Lava fields and s=
+eeing lush green places<o:p></o:p></p></div><div><p class=3D"MsoNormal">We w=
+ant to stay at the Minna Mosfell Guesthouse-our friends said it was lovely!<=
+o:p></o:p></p></div><div><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p></div><=
+div><p class=3D"MsoNormal">We are open to other ideas but we are pretty much=
+ overwhelmed with all the information our friends sent us so are looking for=
+ some help. &nbsp;I know this is a short time frame to get everything planne=
+d so if you aren=E2=80=99t able to do it let me know ASAP and we totally und=
+erstand. &nbsp;We have been talking about it for ages and all the stars fina=
+lly aligned for us to go! &nbsp;<o:p></o:p></p></div><div><p class=3D"MsoNor=
+mal"><o:p>&nbsp;</o:p></p></div><div><p class=3D"MsoNormal">I look forward t=
+o hearing from you!<o:p></o:p></p></div><div><p class=3D"MsoNormal">Jenn Rei=
+lly<o:p></o:p></p></div><div><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><di=
+v id=3D"AppleMailSignature"><p class=3D"MsoNormal">Sent from my iPad<o:p></o=
+:p></p></div><div><p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><br>=
+On Aug 12, 2019, at 9:25 PM, Jennifer Reilly &lt;<a href=3D"mailto:jennlj79@=
+gmail.com">jennlj79@gmail.com</a>&gt; wrote:<o:p></o:p></p></div><blockquote=
+ style=3D"margin-top:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" s=
+tyle=3D"margin-bottom:12.0pt"><o:p>&nbsp;</o:p></p><div id=3D"AppleMailSigna=
+ture"><p class=3D"MsoNormal">Sent from my iPad<o:p></o:p></p></div><div><p c=
+lass=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><br>Begin forwarded messag=
+e:<o:p></o:p></p></div><blockquote style=3D"margin-top:5.0pt;margin-bottom:5=
+.0pt"><div><p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><b>From:</b=
+> "Lorraine Whittemore" &lt;<a href=3D"mailto:lwhittemore@cruiseplanners.com=
+">lwhittemore@cruiseplanners.com</a>&gt;<br><b>Date:</b> September 21, 2017 a=
+t 6:03:20 PM EDT<br><b>To:</b> &lt;<a href=3D"mailto:jennlj79@gmail.com">jen=
+nlj79@gmail.com</a>&gt;<br><b>Subject:</b> <b>Information on Iceland self dr=
+ive trip</b><o:p></o:p></p></div></blockquote><blockquote style=3D"margin-to=
+p:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal">Hi Jenn,<o:p></o:p>=
+</p><p class=3D"MsoNormal">&nbsp;<o:p></o:p></p><p class=3D"MsoNormal">It wa=
+s so nice to meet you at the fair. When we talked you were thinking of a sel=
+f drive trip around Iceland for 2018-2019. I thought it may be helpful for y=
+ou to see what a full circumference tour would entail and what the cost may b=
+e. Please consider that I had to price with today=E2=80=99s pricing and this=
+ could change based on when you travel. It should give you an idea of all th=
+e wonderful things you can see and experience in this amazing country. There=
+ are also some really fun and adventurous tours that I added with links so y=
+ou can learn more about them.<o:p></o:p></p><p class=3D"MsoNormal">&nbsp;<o:=
+p></o:p></p><p class=3D"MsoNormal">I would love the opportunity to help you p=
+lan this trip when you are ready. I will do the leg work to map the trip out=
+, help you decide where to stop and where to stay overnight, provide an itin=
+erary like the one attached with complete directions and a map of Iceland!<o=
+:p></o:p></p><p class=3D"MsoNormal">&nbsp;<o:p></o:p></p><p class=3D"MsoNorm=
+al">Look forward to working with you. Please give me a call when you are rea=
+dy! Let me know if you have questions.<o:p></o:p></p><p class=3D"MsoNormal">=
+&nbsp;<o:p></o:p></p><p class=3D"MsoNormal">Lorraine<o:p></o:p></p><p class=3D=
+"MsoNormal">&nbsp;<o:p></o:p></p><p class=3D"MsoNormal"><i><span style=3D"fo=
+nt-family:&quot;AvenirNext LT Pro Bold&quot;;color:#70AD47">Lorraine Whittem=
+ore&nbsp; </span></i><o:p></o:p></p></div></blockquote></div></blockquote></=
+div></div></div></blockquote></body></html>=
+
+--Apple-Mail-3E87283E-B143-4C3D-BA4F-6394690A6EB4
+Content-Type: image/jpeg;
+	name=image001.jpg;
+	x-apple-part-url="image001.jpg@01D55209.45C4DB10"
+Content-Disposition: inline;
+	filename=image001.jpg
+Content-Transfer-Encoding: base64
+Content-Id: <image001.jpg@01D55209.45C4DB10>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4Ss8RXhpZgAATU0AKgAAAAgABgALAAIAAAAmAAAIYgESAAMA
+AAABAAEAAAExAAIAAAAmAAAIiAEyAAIAAAAUAAAIrodpAAQAAAABAAAIwuocAAcAAAgMAAAAVgAA
+EUYc6gAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAFdpbmRvd3MgUGhvdG8gRWRpdG9yIDEwLjAuMTAwMTEuMTYzODQAV2luZG93cyBQ
+aG90byBFZGl0b3IgMTAuMC4xMDAxMS4xNjM4NAAyMDE4OjEyOjI4IDA5OjM1OjI4AAAGkAMAAgAA
+ABQAABEckAQAAgAAABQAABEwkpEAAgAAAAM3NQAAkpIAAgAAAAM3NQAAoAEAAwAAAAEAAQAA6hwA
+BwAACAwAAAkQAAAAABzqAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAxODoxMjoyOCAwOTozMTozMAAyMDE4OjEyOjI4IDA5OjMx
+OjMwAAAAAAYBAwADAAAAAQAGAAABGgAFAAAAAQAAEZQBGwAFAAAAAQAAEZwBKAADAAAAAQACAAAC
+AQAEAAAAAQAAEaQCAgAEAAAAAQAAGZAAAAAAAAAAYAAAAAEAAABgAAAAAf/Y/9sAQwAIBgYHBgUI
+BwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy
+/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjIy/8AAEQgBAACqAwEhAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgME
+BQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEV
+UtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3
+eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh
+4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALUR
+AAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDTh
+JfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJ
+ipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz
+9PX29/j5+v/aAAwDAQACEQMRAD8A8ZRfarCr7VQiZUHpUyoPSmBIEHpUgQelAiQIPQU8IPQUwFCD
+0FO2D0FABsHoKNg9BQA3YPQU0oPQUANKD0FMKD0pAMKD0qJkHpQMiZB6VAyj0pAQOvtVYjk0AXUX
+ip1WgCZVqZVpiJAtSqtMCQLTgtAD9tLtoANtNIoAaRTSKAGkU0igBhFRMtICJlqF1oGQOtUyPmP1
+pAXkXirCrQBMq1KopiJVWpAKYEgFPC0APCdyaa08ScA7j6VEpWKSuNWcscbQv1FXIbcS4Py1zuq0
+zVQRM2nzAZWFHWoTap0lt5EP+yaaqyBwRHJprYJicNj+E8GqLxtG21lII9a3hNSMnFojIqNhVEkb
+LUDrQMgdapMPmP1pAX0HAqwgpgTKKlVaBEqipAKYEirnjFWo7c+mRUTlYqMbla6ZEUgMufrWUsLN
+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
+MO0bwpLE9hjI460STasOLs7m0biI8iRT+NR+chH3l/OuWx13I3lQ/wAQ/OmGZT/Gv50hgZk6bl/O
+q0kinOGH50Bcru4x1FQNIBnnNNIlspTXwXbJlWiJU56hgeCPY1VltZygELdMxMCcZAPB57YreKsj
+mk7sbNdKqkrErlMRIWHtg8f561S+znP+qce24VRJ/9n/4THoaHR0cDovL25zLmFkb2JlLmNvbS94
+YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5
+ZCc/Pg0KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+PHJkZjpSREYgeG1sbnM6
+cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOkRl
+c2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUx
+ODJmMWIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+PHhtcDpDcmVh
+dG9yVG9vbD5XaW5kb3dzIFBob3RvIEVkaXRvciAxMC4wLjEwMDExLjE2Mzg0PC94bXA6Q3JlYXRv
+clRvb2w+PHhtcDpDcmVhdGVEYXRlPjIwMTgtMTItMjhUMDk6MzE6MzAuNzQ1PC94bXA6Q3JlYXRl
+RGF0ZT48L3JkZjpEZXNjcmlwdGlvbj48L3JkZjpSREY+PC94OnhtcG1ldGE+DQogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICA8P3hwYWNrZXQgZW5kPSd3Jz8+/9sAQwAFAwQEBAMFBAQE
+BQUFBgcMCAcHBwcPCwsJDBEPEhIRDxERExYcFxMUGhURERghGBodHR8fHxMXIiQiHiQcHh8e/9sA
+QwEFBQUHBgcOCAgOHhQRFB4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4e
+Hh4eHh4eHh4e/8AAEQgAUgBEAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYH
+CAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHw
+JDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6
+g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk
+5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIB
+AgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEX
+GBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKT
+lJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX2
+9/j5+v/aAAwDAQACEQMRAD8A8JtoehxWjBDz061HbRcCtrSbPz5VU4GWwDWspKKuyUruxBFbnyzI
+RhR1JqrbXLXFwYo7cooONzDOf8K2dfPnTfYLMq0UJAcA53n3xV3TNBjXZJFEYpOh7j8Aev0yK8+e
+JlJWR208Ot2R2Oj290gVmMTkZJZMqRTdS8MCJMrIBnoy5ZPx7iumgheCBlkU5Q/MB2/21/z0pJFW
+azcxOAynDr6Hs2P8KyhWmnuOVKPY8xv7SW3mMMq4YDPHII9RWVdxV2mrg3UbRtFsljJP/wCr2rmL
+mPrkV6NKp7RXOOcORnPSw5c8Cir0sQDniirsTc6W3QYFbVyjWtlbkEqzkrwe+Kz7ZOmRmrniG6ig
+0mKR95Mcu7A9xx/KscT8JtQ1Zq+EdLVYZGkG6R3yc9cYrtYIo4rIZjIIHDVznw+cXFvC5Rnab5gB
+/npXU6lqctqRaPYxbedzLKN2Poa44q7PVjayuZWtXDW6B40BBXHA6en9fzrBPmG3NxA2MA7lHb/6
+1dXfqseh/a/JDwEZBJ6fjXINq+m2Mv8Apkl2WclQLWLK8dR05x3qXSbd0Obglqc5qkk6XBbIBJ5U
+1mXIDZ42nr68VreIVW6ZbmylkuLV+VOwAg+hHrXLabrK3UzwSRGFg2FBHDqehrTDuUXqcWIgmtAl
+T5zwKKtSp854FFelY865v2vHWs7xIZZm+wD/AJbMu0gZxngfrWnbdj9KmurBboRTowSWFwRnoecj
+9QKxxMbwub4Z+/ZnV+FtNlm0aKytLs2kogCFx95cjnHvV6w+H6WkxYrLKzEFpJZCTx79ee/rVeKR
+7LVfODZinG8Edj3FdLq3isi0gtoI/MumHlxherelcSk+h7UaUXa41YZF8O3FkseYopBhQOgqGPw5
+ZXUSykEhhyoPBz1rE+3+KybyC0sI1hlwuQ+85x945H6Co4r3XtKtftN3IMqMMqxlMgd8UcrRT5Xo
+O8UQWNjaSQ28EUf+6uDketeQeI9NFrrdrNbxlUuo1Y4PRgxz/OvRdUvxqkfmxklTnNcxrnmvrcQC
+IYYbZMex/wAmlT1lY58TZRujPlGXNFEvDmivWS0PEbNq1I9atXFu11ZvAjEbhzg4rKtJelaZnK2k
+jKcEKTnOOKmVuVlQupIs+E9ZgNlaaDfGVr1JJVWdyCHXggZ9RkcY7V0FzpWrLKbrTbiGG5WJljM8
+e5M9uh615vrV9p1loVu0ES/2ql2JhOp5ZGx8v6V6npOqhIja3RyCoznuMcEV5jSTuezQm5KzLmjS
+JHYmXUvEXiFJgF3x2tvGAcEZA2qSOMgHPvWHrmk2eoSReQ2qpEWBY3d45YgHngcDOPyPSuksFspV
+MclxtB6njpVXW5NKsl3LPvwueW6e+KqUuqNvZu12zl/FD22k2BkB2r5ZKg9h0FcYkEltLEk0yl5I
+RKFV92dw7+h9qrfETV5dV1K3toyVidiwB+6QuABU0Uaho5ADuRNrFjk9On0qqS9655+JlfQbMf3h
+oqGaT5zzRXczz7Fi2fBFattMMYOD7VhQyYGa0NPD3VwkEQJZjj6D1qeay1KSu7I0I9GtL68jmePl
+ZA59sEH+ldLrELMiyRk7kGMjg4/wqzpunJbWyxsuW4OafcRh3aNztI+6/wDjXmSqqpK6Pao0fZwS
+e5xOoalqNuNkcrIPUCs5ZL26cm5uHb2PFddd29ssm24tvmHQgnDe4rIv7QGUGG1CZ7s2cD15ppmk
+tiultbmCMyQo7LkgsvIqtesqqQo2j2pZEuXtwILjy5Fzt3YCsM8gnBI+oFUGmWZpYYpTMYVVpHbC
+na7YU4HG0jGDXdSnFxVjxq8ZRk7lKaT94aKq3EhEpDcHuDRWtzMux9BXVeAADezEgZAHNFFY1/4b
+NcP/ABEd/J9xPpVScAs4IyMUUV5VPoe3IzWJMS5J61nan0P0oorZEvYwpOLSMj1/rVGcfurxv4lB
+RT3ChVIA9skn8TRRW+H3Z52L6GRq6It4VVVUBRgAcDiiiiuo4z//2Q==
+
+--Apple-Mail-3E87283E-B143-4C3D-BA4F-6394690A6EB4
+Content-Type: image/png;
+	name=image002.png;
+	x-apple-part-url="image002.png@01D55209.45C4DB10"
+Content-Disposition: inline;
+	filename=image002.png
+Content-Transfer-Encoding: base64
+Content-Id: <image002.png@01D55209.45C4DB10>
+
+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
+--Apple-Mail-3E87283E-B143-4C3D-BA4F-6394690A6EB4
+Content-Type: image/png;
+	name=image007.png;
+	x-apple-part-url="image007.png@01D5520B.92B98F90"
+Content-Disposition: inline;
+	filename=image007.png
+Content-Transfer-Encoding: base64
+Content-Id: <image007.png@01D5520B.92B98F90>
+
+iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAZ
+1gAAGdYBGNHK7QAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAR0SURBVGhD
+7VrPixt1FH/f70ySSddtm0qbjdpD17qwsq0H8VDaUBER6kEEvWgRD631T2g9puDFg7B4q0U8WCis
+eBEUYQ+CVEqrPa0NVClKXVNaarY/kpmkM+/1M7ts2Z3JZHfDzGRT8iUQmPl+3/d93q/ve+875sEP
+pp8htt4nluNC9LwiMmlghoBluiVKnfdEfWkqL3tSmN8kRXsUKWNgcCwyqiB72UVMHxuadpgi6igp
+3kqkBwzIstgVBlkk/LZvUjsABAgHfahRH8wTAGRJEQPk7GtbzhDM2jLa+AwEWSYlD0nEg+WzUoth
+F35N+Nf+uyyeW3B2HUV9E2iG7yOiXlGmvqI9uaGVcY81tZiYtdY+RJcxAOsw4L0LQGNRft4/MGBT
+Ef+qDHVGs7544ybdNM12a/zIBNOP10LCbxSyo1DZEYCKjFn9ASOQsVI/i5n51K7xxd9nT9iVyulF
+s6KFS0QHwoY0e3XMNzXMWZrWafQFDDKNeaWNr3P5O5ffKLeab5VPb9zJOqzoCxg4wA+ZZvvC7LlT
+D8qVSixA+nPOiDQzhv6pZo//W6lUom2mB4jpa0bTH4hQ/xw9cKkd5Pfcne25UadkFexamC9Tj5Dn
+ds0f0wdDquq6tBAE8sv82JZigz5i/v+dJuWeVRLI4JX7FNZsW8qUN0kAYKH5EXIaQXZs2ymIm3sV
+EesVsJvDf2AKwgZ+3awvdc1oUveRsD8MM2WxQB2LLPeY/KYPRsNjnB68ex1LUgezDp56njIE07Po
+El4Yu2YQg1xFYgsr5IUdhtaObcFvAgNuxBa5iHLGXaxFuh8MZmIhMiDKpRqa+TqTcZay9CeqkNAJ
+327y1bpNDdq7mtl6rX63tHN0WpM+z0agZmFtsrjHsOIwAG1J75wRvZBVdOGlgnO5ViuFNDDzHkml
+Wg09/7DcciYnx3+bmQmfJf9Zt/do1/BjYLrnjMDGsKl36FDJq3Zgeqoa7Tj+/Kmp8Ptb18YmXOLd
+IAw5ReOJ3Wfi9nE/Xysy7YNSSoCx2XKzjcHdWS9sc8meROGPRmX3sek1Y7r1oiv5vcjVRlIHgwiW
+c7NcnP6+tptoezgE519cOPl6vRH0p7m5OaNuvVwgylv2Ckdnbb2mPe85PIrsyiyDjF8zil7ASfOZ
+qGwoM/Y3tRp/fXFm5unvylN0b6WkfSCOt/UTT+ggjpLM8jstUoTP71pLK/77JMCMoPc1gQS4YxWp
+DXTtqfaY2WUmbSpkxJNxdL33Ix7mHjMPQt1qmJUg4wfjU186pSNiaHSTHmz7a/TqRt/6W+HJgFmP
+TSQwZwgmAaHGQnKomVjEmACRoWYSEGosJIeaiUWMCRAZaiYBocZCcqiZWMSYAJEnTTP+pWd0Yy0B
+ASZEUsREXXsdl7gllCCRzbWEdo+VLGq4eRMdxM89JSfw+cC+bl8/xLpz3MRwT6qUPms6buGbrHm7
+Tto8ho/o9qPas+LeaxU9Vq1Ovea840jTzDVRcj+AtYTuOzvxpND+RZvjby38FXvtbx8BzfZ2FRFD
+DZAAAAAASUVORK5CYII=
+
+--Apple-Mail-3E87283E-B143-4C3D-BA4F-6394690A6EB4
+Content-Type: image/png;
+	name=image008.png;
+	x-apple-part-url="image008.png@01D5520B.92B98F90"
+Content-Disposition: inline;
+	filename=image008.png
+Content-Transfer-Encoding: base64
+Content-Id: <image008.png@01D5520B.92B98F90>
+
+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
+--Apple-Mail-3E87283E-B143-4C3D-BA4F-6394690A6EB4--
+
+--Apple-Mail-423CA0EA-7209-49E6-B879-0853F8737DE7--
